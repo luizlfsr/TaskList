@@ -6,11 +6,25 @@
 }
 
 body {
-    background: linear-gradient(90deg ,rgb(241, 84, 57) 0%, rgb(245, 51, 93) 100%);
+    background-image: url("http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSnfWssEmWYrQDh-4O6ikdoXW_esZt5lCoorXFX6hl7AfkznPIcQ_9_VpIPE0slr2td21gzRQ1PLwRRiBzkZmI");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg ,rgba(241, 84, 57, .93) 0%, rgb(245, 51, 93, .93) 100%);
+    z-index: -1;
 }
 
 .container {
@@ -19,6 +33,13 @@ body {
     padding: 40px 30px;
     width: 40%;
     min-width: 500px;
+    max-height: 650px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.backContainer {
+    background-color: #eaeaea;
+    border-radius: 5px;
 }
 
 .new-task-container {
@@ -37,7 +58,6 @@ body {
     font-size: 1rem;
     border:2px solid #d1d3d4;
 }
-
 .new-task-input:focus {
     outline: none;
     border: 2px solid #41b883;
@@ -57,17 +77,18 @@ body {
     padding: 12px;
     cursor: pointer;
 }
-
-.new-task-button:hover, .delete-task:hover {
+.new-task-button:hover, .delete-button:hover {
     background-color: #30855e;
     transform: translateY(-1px);
 }
-.new-task-button:active, .delete-task:active {
+.new-task-button:active, .delete-button:active {
     background-color: #5de2a6;
     transform: translateY(1px);
 }
 
 .tasks-container {
+    max-height: 400px;
+    overflow: auto;
     background-color: #fff;
     height: 100%;
     margin-top: 60px;
@@ -85,12 +106,17 @@ body {
 
 .task-item {
     display: flex;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
-
 .task-item:not(:first-child) {
-    padding-top: 20px;
+    padding-top: 15px;
     border-top: 2px solid #d1d3d4;
+}
+.task-item:last-child {
+    border-bottom: 2px solid #d1d3d4;
+}
+.task-item:first-child {
+    padding-top: 15px ;
 }
 
 .task-texto {
@@ -98,7 +124,7 @@ body {
     padding: 12px;
 }
 
-.delete-task {
+.delete-button {
     height: 100%;
     background-color: #41b883;
     border: none;
@@ -109,3 +135,20 @@ body {
     border-radius: 5px;
 }
 
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0 10px 10px 0; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #41b883;
+    border-radius: 0 5px 5px 0; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #30855e; 
+}
