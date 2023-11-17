@@ -70,4 +70,13 @@ addTaskButton.addEventListener('click', () => {
     taskContainer.appendChild(novaTarefa);
 });
 
+inputElement.addEventListener('keydown', (e) => {
+    if (e.key === "Enter") {
+        handleAddTask();
+        const novaTarefa = addTask();
+        taskContainer.appendChild(novaTarefa);
+    }
+
+})
+
 inputElement.addEventListener('input', handleInputChange)
