@@ -42,7 +42,6 @@ const addTask = () => {
 
         textoTaskItem.textContent = valorInput
         textoTaskItem.classList.add('task-texto', 'incomplete-task')
-        //textoTaskItem.setAttribute('onclick', 'tarefaCompleta()')
 
         buttonTaskItem.textContent = 'deletar';
         buttonTaskItem.classList.add('delete-button')
