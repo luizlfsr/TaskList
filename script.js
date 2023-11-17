@@ -41,10 +41,16 @@ const addTask = () => {
         divTaskItem.classList.add('task-item')
 
         textoTaskItem.textContent = valorInput
-        textoTaskItem.classList.add('task-texto')
+        textoTaskItem.classList.add('task-texto', 'incomplete-task')
+        //textoTaskItem.setAttribute('onclick', 'tarefaCompleta()')
 
         buttonTaskItem.textContent = 'deletar';
         buttonTaskItem.classList.add('delete-button')
+
+        divTaskItem.appendChild(textoTaskItem)
+        divTaskItem.appendChild(buttonTaskItem)
+    
+        inputElement.value = ''
 
 
         buttonTaskItem.addEventListener('click', () => {
@@ -52,17 +58,30 @@ const addTask = () => {
             deleteTask(taskItem);
         });
 
-        
-    
-        divTaskItem.appendChild(textoTaskItem)
-        divTaskItem.appendChild(buttonTaskItem)
-    
-        inputElement.value = ''
+
+        textoTaskItem.addEventListener('click', () => {
+            if (textoTaskItem.classList.contains('taskIncomplete')) {
+                textoTaskItem.classList.remove('taskIncomplete');
+                textoTaskItem.classList.add('taskComplete');
+                tarefaCompleta(textoTaskItem);
+            } else {
+                textoTaskItem.classList.add('taskIncomplete');
+                textoTaskItem.classList.remove('taskComplete');
+                tarefaIncompleta(textoTaskItem);
+            }
+        });
     
         return divTaskItem;
     }
 }
 
+const tarefaCompleta = (element) => {
+    element.style.textDecoration = "line-through"
+}
+
+const tarefaIncompleta = (element) => {
+    element.style.textDecoration = 'none'
+}
 
 addTaskButton.addEventListener('click', () => {
     handleAddTask();
