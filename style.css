@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    user-select: none;
 }
 
 body {
@@ -25,6 +26,10 @@ body::before {
     right: 0;
     background: linear-gradient(90deg ,rgba(241, 84, 57, .93) 0%, rgb(245, 51, 93, .93) 100%);
     z-index: -1;
+}
+
+p {
+    cursor: pointer;
 }
 
 .container {
