@@ -159,3 +159,74 @@ p {
 ::-webkit-scrollbar-thumb:hover {
     background: #30855e; 
 }
+
+@media screen and (max-width: 540px) {
+    * {
+        font-size: 12px;
+    }
+
+    .container {
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 2px solid #fff;
+        padding: 30px 20px;
+        width: 35%;
+        min-width: 300px;
+        max-height: 650 px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .tasks-container {
+        display: flex;
+        flex-direction: column-reverse;
+        max-height: 350px;
+        overflow: auto;
+        background-color: #fff;
+        height: 100%;
+        margin-top: 50px;
+        padding: 25px 15px;
+        border-radius: 5px ;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .new-task-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .new-task-button {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-height: 675px) {
+    .tasks-container {
+        display: flex;
+        flex-direction: column-reverse;
+        max-height: 200px;
+        overflow: auto;
+        background-color: #fff;
+        height: 100%;
+        margin-top: 50px;
+        padding: 25px 15px;
+        border-radius: 5px ;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    * {
+        font-size: 9px;
+    }
+
+    .container {
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 2px solid #fff;
+        padding: 30px 20px;
+        width: 35%;
+        min-width: 250px;
+        max-height: 650px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+}
