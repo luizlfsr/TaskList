@@ -87,6 +87,8 @@ body::before {
 }
 
 .tasks-container {
+    display: flex;
+    flex-direction: column-reverse;
     max-height: 400px;
     overflow: auto;
     background-color: #fff;
@@ -108,11 +110,11 @@ body::before {
     display: flex;
     padding-bottom: 15px;
 }
-.task-item:not(:first-child) {
+.task-item:not(:last-child) {
     padding-top: 15px;
     border-top: 2px solid #d1d3d4;
 }
-.task-item:last-child {
+.task-item:first-child {
     border-bottom: 2px solid #d1d3d4;
 }
 .task-item:first-child {
