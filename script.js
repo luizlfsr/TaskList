@@ -4,7 +4,7 @@ const taskContainer = document.querySelector('.tasks-container')
 const deleteButton = document.querySelector('.delete-button')
 const deleteTask = (taskItem) => {
     taskItem.remove();
-}
+};
 
 const validateInput = () => {
     return inputElement.value.trim().length > 0
@@ -42,7 +42,6 @@ const addTask = () => {
 
         textoTaskItem.textContent = valorInput
         textoTaskItem.classList.add('task-texto', 'incomplete-task')
-        //textoTaskItem.setAttribute('onclick', 'tarefaCompleta()')
 
         buttonTaskItem.textContent = 'deletar';
         buttonTaskItem.classList.add('delete-button')
