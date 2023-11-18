@@ -98,3 +98,4 @@ inputElement.addEventListener('keydown', (e) => {
 })
 
 inputElement.addEventListener('input', handleInputChange)
+
