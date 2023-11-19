@@ -6,6 +6,31 @@
     user-select: none;
 }
 
+.button {
+    margin-left: 12px;
+    padding: 12px;
+    border: none;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 5px ;
+    background-color: #41b883;
+    font-size: 1rem;
+    height: 100%;
+    padding: 12px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #30855e;
+    transform: translateY(-1px);
+}
+.button:active {
+    background-color: #5de2a6;
+    transform: translateY(1px);
+}
+.button:focus-visible {
+    outline: none;
+}
+
 body {
     background-image: url("http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSnfWssEmWYrQDh-4O6ikdoXW_esZt5lCoorXFX6hl7AfkznPIcQ_9_VpIPE0slr2td21gzRQ1PLwRRiBzkZmI");
     background-size: cover;
@@ -69,28 +94,6 @@ p {
     color: #5a5a5a
 }
 
-.new-task-button {
-    flex: 1;
-    border: none;
-    font-weight: 500;
-    color: #fff;
-    border-radius: 5px ;
-    background-color: #41b883;
-    margin-left: 12px;
-    font-size: 1rem;
-    height: 100%;
-    padding: 12px;
-    cursor: pointer;
-}
-.new-task-button:hover, .delete-button:hover {
-    background-color: #30855e;
-    transform: translateY(-1px);
-}
-.new-task-button:active, .delete-button:active {
-    background-color: #5de2a6;
-    transform: translateY(1px);
-}
-
 .tasks-container {
     display: flex;
     flex-direction: column-reverse;
@@ -125,37 +128,22 @@ p {
 .task-item:first-child {
     padding-top: 15px ;
 }
-
 .task-texto {
     flex: 1;
     padding: 12px;
 }
 
-.delete-button {
-    height: 100%;
-    background-color: #41b883;
-    border: none;
-    color: #fff;
-    padding: 12px;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 5px;
-}
-
 ::-webkit-scrollbar {
     width: 10px; 
 }
-
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 0 10px 10px 0; 
 }
-
 ::-webkit-scrollbar-thumb {
     background: #41b883;
     border-radius: 0 5px 5px 0; 
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: #30855e; 
 }
@@ -166,26 +154,14 @@ p {
     }
 
     .container {
-        background-color: rgba(255, 255, 255, 0.04);
-        border: 2px solid #fff;
         padding: 30px 20px;
-        width: 35%;
         min-width: 300px;
-        max-height: 650 px;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     }
 
     .tasks-container {
-        display: flex;
-        flex-direction: column-reverse;
         max-height: 350px;
-        overflow: auto;
-        background-color: #fff;
-        height: 100%;
         margin-top: 50px;
         padding: 25px 15px;
-        border-radius: 5px ;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     }
 
     .new-task-container {
@@ -201,18 +177,10 @@ p {
 
 @media screen and (max-height: 675px) {
     .tasks-container {
-        display: flex;
-        flex-direction: column-reverse;
         max-height: 200px;
-        overflow: auto;
-        background-color: #fff;
-        height: 100%;
         margin-top: 50px;
         padding: 25px 15px;
-        border-radius: 5px ;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     }
-
 }
 
 @media screen and (max-width: 300px) {
@@ -221,12 +189,7 @@ p {
     }
 
     .container {
-        background-color: rgba(255, 255, 255, 0.04);
-        border: 2px solid #fff;
-        padding: 30px 20px;
-        width: 35%;
         min-width: 250px;
-        max-height: 650 px;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        padding: 30px 25px;
     }
 }

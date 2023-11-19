@@ -36,6 +36,7 @@ const addTask = () => {
 
         const divTaskItem = document.createElement('div')
         const textoTaskItem = document.createElement('p')
+        const buttonEdit = document.createElement('button')
         const buttonTaskItem = document.createElement('button')
     
         divTaskItem.classList.add('task-item')
@@ -43,10 +44,14 @@ const addTask = () => {
         textoTaskItem.textContent = valorInput
         textoTaskItem.classList.add('task-texto', 'incomplete-task')
 
+        buttonEdit.textContent = 'editar'
+        buttonEdit.classList.add('button', 'edit-button')
+
         buttonTaskItem.textContent = 'deletar';
-        buttonTaskItem.classList.add('delete-button')
+        buttonTaskItem.classList.add('button', 'delete-button')
 
         divTaskItem.appendChild(textoTaskItem)
+        divTaskItem.appendChild(buttonEdit)
         divTaskItem.appendChild(buttonTaskItem)
     
         inputElement.value = ''
