@@ -30,6 +30,7 @@ const addTask = () => {
     const inputIsValid = validateInput()
 
     if (!inputIsValid) {
+        inputElement.value = ''
         return handleAddTask()
     } else {
         const valorInput = inputElement.value.trim();
@@ -103,4 +104,3 @@ inputElement.addEventListener('keydown', (e) => {
 })
 
 inputElement.addEventListener('input', handleInputChange)
-
